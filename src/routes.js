@@ -6,11 +6,13 @@ import Layout from './components/Layout';
 import IndexPage from './components/IndexPage';
 import AthletePage from './components/AthletePage';
 import NotFoundPage from './components/NotFoundPage';
-
+ 
 const routes = (
   <Route path="/" component={Layout}>
     <IndexRoute component={IndexPage}/>
-    <Route path="athlete/:id" component={AthletePage}/>
+    <Route path="athletes" component={IndexPage}>
+      <Route path="athlete/:id" component={AthletePage}/>
+    </Route>
     <Route path="*" component={NotFoundPage}/>
   </Route>
 );

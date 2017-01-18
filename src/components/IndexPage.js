@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import AthletePreview from './AthletePreview';
+import {SearchAthlete} from './SearchAthlete';
 import athletes from '../data/athletes';
 
 export default class IndexPage extends React.Component {
@@ -9,8 +9,9 @@ export default class IndexPage extends React.Component {
     return (
       <div className="home">
         <div className="athletes-selector">
-          {athletes.map(athleteData => <AthletePreview key={athleteData.id} {...athleteData} />)}
+          <SearchAthlete/>
         </div>
+        {this.props.children || ""}
       </div>
     );
   }

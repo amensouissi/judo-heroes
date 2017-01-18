@@ -244,3 +244,14 @@ nav.atheletes-menu a.active {
 #abar a:hover {
   text-decoration: underline;
 }
+
+
+.search-input{
+    border: solid 1px gray;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    height: 25px;
+    width: 300px;
+    background-color: white;
+    padding: 3px 4px;
+}
